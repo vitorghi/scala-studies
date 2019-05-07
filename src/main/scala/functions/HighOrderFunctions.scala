@@ -14,7 +14,8 @@ object HighOrderFunctions extends App {
     loop(a)
   }
 
-  def _fact(x: Int) = 1
+  def _fact(n: Int): Int =
+    if (n == 0) 1 else n * _fact(n - 1)
 
   def sumInt(a: Int, b: Int): Int = sum(x => x, a, b)
   def sumCubes(a: Int, b: Int): Int = sum(x => x * x * x, a, b)
@@ -42,4 +43,7 @@ object HighOrderFunctions extends App {
   def product(f: Int => Int)(a: Int, b: Int): Int = {
     if (a > b) 1 else f(a) * product(f)(a + 1, b)
   }
+
+  def factorial(x: Int): Int = product(x => x)(1, x)
+
 }
