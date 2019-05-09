@@ -1,3 +1,5 @@
+package classes
+
 import scala.annotation.tailrec
 
 object rationals extends App {
