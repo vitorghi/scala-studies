@@ -33,7 +33,6 @@ object HighOrderFunctions extends App {
   def sumCubesOptimized: (Int, Int) => Int = sumOptimized(x => x * x * x)
   def sumFactorialsOptimized: (Int, Int) => Int = sumOptimized(_fact)
 
-
   // Further improving sum method
   def sumImproved(f: Int => Int)(a: Int, b: Int): Int = {
     if (a > b) 0 else f(a) + sumImproved(f)(a + 1, b)

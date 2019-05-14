@@ -10,7 +10,6 @@ object rationals extends App {
   println(x.sub(y).sub(z))
 }
 
-
 class Rational(x: Int, y: Int) {
   require(y != 0, "denominator must not be zero")
 
