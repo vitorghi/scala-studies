@@ -14,7 +14,7 @@ object ParenthesesBalancing extends App {
         case x if x == ')' && closedFound >= openFound => false
         case x if x == '(' && evaluatedChars.tail.isEmpty => false
         case x if x == '(' => charsIterator(evaluatedChars.tail, openFound + 1, closedFound)
-        case x if x == ')'=>  charsIterator(evaluatedChars.tail, openFound, closedFound + 1)
+        case x if x == ')' => charsIterator(evaluatedChars.tail, openFound, closedFound + 1)
         case _ => charsIterator(evaluatedChars.tail, openFound, closedFound)
       }
     }

@@ -1,5 +1,7 @@
 package recursion
 
+import scala.annotation.tailrec
+
 object NewtonSqrt extends App {
 
   def abs(x: Double): Double =
@@ -13,6 +15,7 @@ object NewtonSqrt extends App {
     def improve(guess: Double) =
       (guess + x / guess) / 2
 
+    @tailrec
     def sqrtIterator(guess: Double): Double =
       if (isCloseEnough(guess)) guess
       else sqrtIterator(improve(guess))
